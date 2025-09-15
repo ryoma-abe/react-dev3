@@ -9,13 +9,8 @@ export default function ModeButton() {
   };
 
   useEffect(() => {
-    if (theme === "dark") {
-      document.body.classList.add("dark");
-      document.body.classList.remove("light");
-    } else {
-      document.body.classList.add("light");
-      document.body.classList.remove("dark");
-    }
+    document.body.classList.remove("light", "dark");
+    document.body.classList.add(theme);
   }, [theme]);
 
   return (
