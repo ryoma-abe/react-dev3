@@ -2,7 +2,7 @@ import { createContext, useContext } from "react";
 
 type ThemeContextType = {
   theme: string;
-  setTheme: React.Dispatch<React.SetStateAction<string>>;
+  setTheme: (value: string) => void;
 };
 
 // 箱を作る
