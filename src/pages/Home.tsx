@@ -1,7 +1,9 @@
 import MainLayout from "../layouts/MainLayout";
 
 export default function Home() {
-  return <MainLayout>
-    dadadada
-  </MainLayout>;
+  return (
+    <MainLayout>
+      <p>これはホームページです</p>
+    </MainLayout>
+  );
 }
