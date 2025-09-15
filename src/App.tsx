@@ -1,14 +1,13 @@
-import { Link, Route, Routes } from "react-router";
+import { Route, Routes } from "react-router";
 import "./App.css";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Header from "./components/Header";
 
 function App() {
   return (
     <>
-      <nav>
-        <Link to="/">Home</Link> | <Link to="/about">About</Link>
-      </nav>
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
