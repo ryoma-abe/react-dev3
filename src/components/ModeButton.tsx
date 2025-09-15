@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useTheme } from "../context/ThemeContext";
 
 export default function ModeButton() {
@@ -7,11 +6,6 @@ export default function ModeButton() {
   const toggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
   };
-
-  useEffect(() => {
-    document.body.classList.remove("light", "dark");
-    document.body.classList.add(theme);
-  }, [theme]);
 
   return (
     <button className="border pl-2" onClick={toggleTheme}>
