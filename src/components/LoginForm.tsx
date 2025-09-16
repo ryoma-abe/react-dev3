@@ -2,8 +2,8 @@ import { useState } from "react";
 import { useAuth } from "../context/auth/AuthContext";
 
 export default function LoginForm() {
-  const [email, SetEmail] = useState("");
-  const [password, SetPassword] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const { setUser } = useAuth();
 
   const onclickLogin = () => {
@@ -25,7 +25,7 @@ export default function LoginForm() {
           id="email"
           name="email"
           value={email}
-          onChange={(e) => SetEmail(e.target.value)}
+          onChange={(e) => setEmail(e.target.value)}
           className="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
         />
       </div>
@@ -38,7 +38,7 @@ export default function LoginForm() {
           id="password"
           name="password"
           value={password}
-          onChange={(e) => SetPassword(e.target.value)}
+          onChange={(e) => setPassword(e.target.value)}
           className="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
         />
       </div>
