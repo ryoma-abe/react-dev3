@@ -15,7 +15,10 @@ export default function LoginForm() {
   };
 
   return (
-    <form className="max-w-sm mx-auto p-6 bg-white rounded shadow space-y-4">
+    <form
+      className="max-w-sm mx-auto p-6 bg-white rounded shadow space-y-4"
+      onSubmit={onclickLogin}
+    >
       <div className="flex flex-col space-y-1">
         <label htmlFor="email" className="font-medium text-gray-700">
           メールアドレス
@@ -45,7 +48,6 @@ export default function LoginForm() {
       <button
         type="submit"
         className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition"
-        onClick={onclickLogin}
       >
         ログイン
       </button>
