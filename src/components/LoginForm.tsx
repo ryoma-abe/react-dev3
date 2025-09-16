@@ -1,8 +1,19 @@
 import { useState } from "react";
+import { useAuth } from "../context/auth/AuthContext";
 
 export default function LoginForm() {
   const [email, SetEmail] = useState("");
   const [password, SetPassword] = useState("");
+  const { setUser } = useAuth();
+
+  const onclickLogin = () => {
+    if (email === "test@gmail.com" && password === "admin") {
+      setUser(true);
+    } else {
+      alert("ログインできません");
+    }
+  };
+
   return (
     <form className="max-w-sm mx-auto p-6 bg-white rounded shadow space-y-4">
       <div className="flex flex-col space-y-1">
@@ -34,6 +45,7 @@ export default function LoginForm() {
       <button
         type="submit"
         className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition"
+        onClick={onclickLogin}
       >
         ログイン
       </button>
