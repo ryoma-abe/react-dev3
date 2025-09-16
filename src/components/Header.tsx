@@ -7,6 +7,7 @@ export default function Header() {
       <nav className="flex gap-2 p-10">
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
+        <Link to="/login">Login</Link>
         <ModeButton />
       </nav>
     </header>
