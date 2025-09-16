@@ -1,3 +1,12 @@
+import { useLocale } from "../context/Locale/LocaleContext";
+import MainLayout from "../layouts/MainLayout";
+
 export default function Locale() {
-  return <div>Locale</div>;
+  const { locale } = useLocale();
+
+  return (
+    <MainLayout>
+      <h1>{locale === "ja" ? "こんにちは" : "Hello"}</h1>
+    </MainLayout>
+  );
 }

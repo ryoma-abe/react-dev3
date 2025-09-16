@@ -3,6 +3,7 @@ import { createContext, useContext } from "react";
 type LocaleContextType = {
   locale: string;
   setLocale: (value: string) => void;
+  toggleLocale: () => void;
 };
 
 // 箱を作る
