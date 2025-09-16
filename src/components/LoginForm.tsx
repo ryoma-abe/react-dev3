@@ -1,4 +1,8 @@
+import { useState } from "react";
+
 export default function LoginForm() {
+  const [email, SetEmail] = useState("");
+  const [password, SetPassword] = useState("");
   return (
     <form className="max-w-sm mx-auto p-6 bg-white rounded shadow space-y-4">
       <div className="flex flex-col space-y-1">
@@ -9,6 +13,8 @@ export default function LoginForm() {
           type="email"
           id="email"
           name="email"
+          value={email}
+          onChange={(e) => SetEmail(e.target.value)}
           className="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
         />
       </div>
@@ -20,6 +26,8 @@ export default function LoginForm() {
           type="password"
           id="password"
           name="password"
+          value={password}
+          onChange={(e) => SetPassword(e.target.value)}
           className="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
         />
       </div>
